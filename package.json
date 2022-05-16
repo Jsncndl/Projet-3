@@ -1,0 +1,21 @@
+{
+  "name": "jsncndl.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/ --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsncndl/Jsncndl.github.io.git"
+  },
+  "author": "Josian",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Jsncndl/Jsncndl.github.io/issues"
+  },
+  "homepage": "https://github.com/Jsncndl/Jsncndl.github.io#readme"
+}
