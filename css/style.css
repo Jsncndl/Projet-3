@@ -14,6 +14,11 @@ figure {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -162,6 +167,7 @@ body {
   background-color: white;
   box-shadow: 0px 3px 6px lightgray;
   margin-bottom: 20px;
+  position: relative;
 }
 .main__container__card__fig {
   width: 100%;
@@ -169,6 +175,18 @@ body {
 .main__container__card__fig__image {
   height: 175px;
   overflow: hidden;
+}
+.main__container__card__fig__image__new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: fit-content;
+  padding: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: 500;
 }
 .main__container__card__fig__image__img {
   width: 100%;
@@ -192,24 +210,13 @@ body {
   margin-bottom: 2px;
 }
 .main__container__card__fig__caption__btn {
-  color: blue;
-}
-.main__container__card__fig__caption__btn__heart {
-  color: aqua;
-  width: 25px;
-  height: 25px;
-}
-.main__container__card__new {
-  position: relative;
-  bottom: 235px;
-  left: 245px;
-  width: fit-content;
-  padding: 7px;
-  padding-left: 12px;
-  padding-right: 12px;
-  background-color: #99e2d0;
-  color: #278870;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 15px;
+  height: 40px;
+  width: 40px;
 }
 
 .footer {
