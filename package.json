@@ -7,7 +7,11 @@
     "sass": "sass --watch ./sass/style.scss:./css/style.css",
     "sass_menu": "sass --watch ./sass/style_menu.scss:./css/style_menu.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/ --watch",
-    "prefix_menu": "postcss ./css/style_menu.css --use autoprefixer -d ./css/prefixed/ --watch"
+    "prefix_menu": "postcss ./css/style_menu.css --use autoprefixer -d ./css/prefixed/ --watch",
+    "sass-desktop": "sass --watch ./sass/style_desktop.scss:./css/style_desktop.css",
+    "prefix-desktop": "postcss ./css/style_desktop.css use autoprefixer -d ./css/prefixed --watch",
+    "sass_menu-desktop": "sass --watch ./sass/style_menu_desktop.scss:./css/style_menu_desktop.css",
+    "prefix_menu-desktop": "postcss ./css/style_menu_desktop.css use autoprefixer -d ./css/prefixed --watch"
   },
   "repository": {
     "type": "git",

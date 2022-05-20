@@ -1,5 +1,6 @@
 @import "./Utils/variables";
 @import "./Utils/reset";
+@import "./Utils/animations";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -7,6 +8,44 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(#f2f2f2, 0.9);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  opacity: 1;
+  animation: spinner-bg 1s both;
+  animation-delay: 1.5s;
+
+  &__item {
+    width: 35px;
+    height: 35px;
+    margin: 20px;
+    background: linear-gradient(
+      $color-primary,
+      $color-secondary,
+      $color-primary
+    );
+    border: 1px solid rgba($color-tertiary, 0.5);
+    border-radius: 100px;
+    transform: translateY(0px) rotate(0deg);
+    animation: spinner 1.3s ease-in-out;
+    &--1 {
+      animation-delay: 0.1s;
+    }
+    &--2 {
+      animation-delay: 0.2s;
+    }
+    &--3 {
+      animation-delay: 0.3s;
+    }
+  }
 }
 
 .header {
@@ -55,7 +94,7 @@ body {
       color: grey;
     }
 
-    .btn {
+    .btn--explore {
       margin-top: 30px;
       margin-bottom: 25px;
       padding: 15px;
@@ -71,13 +110,23 @@ body {
       font-size: 16px;
       box-shadow: 0px 2px 3px grey;
       color: white;
+      transition: background-image 300ms ease, box-shadow 300ms ease;
+
+      &:hover {
+        background-image: linear-gradient(
+          -5deg,
+          lighten($color-primary, 5),
+          lighten($color-secondary, 5)
+        );
+        box-shadow: 0px 1px 10px grey;
+      }
     }
   }
   &__operation {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     margin-top: 25px;
     margin-bottom: 30px;
     gap: 15px;
@@ -102,6 +151,7 @@ body {
         box-shadow: 0px 3px 6px lightgray;
         background-color: #f2f2f2;
         font-weight: 700;
+        position: relative;
 
         &::before {
           counter-increment: tuto 1;
@@ -115,7 +165,7 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
-          left: 13px;
+          left: -12px;
         }
         &:last-child {
           background-color: rgba($color-primary, 0.15);
@@ -135,7 +185,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 20px;
   padding-top: 45px;
   padding-bottom: 45px;
   background-color: #f2f2f2;
@@ -205,12 +255,50 @@ body {
 
           &__btn {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: absolute;
             right: 15px;
-            height: 40px;
-            width: 40px;
+            height: 25px;
+            width: 25px;
+
+            .like--bg {
+              opacity: 0;
+              transition: opacity 500ms ease-out;
+
+              &::before {
+                background: linear-gradient(
+                  180deg,
+                  $color-primary,
+                  $color-secondary
+                );
+                background-clip: text;
+                color: transparent;
+              }
+            }
+            .like--nobg {
+              position: absolute;
+              opacity: 1;
+              transition: opacity 300ms ease;
+            }
+
+            &:hover > .like--bg {
+              opacity: 1;
+              height: auto;
+            }
+
+            &:hover > .like--nobg {
+              opacity: 0;
+            }
+
+            &:active > .like--bg {
+              opacity: 1;
+            }
+
+            &:active > .like--nobg {
+              opacity: 0;
+            }
           }
         }
       }
