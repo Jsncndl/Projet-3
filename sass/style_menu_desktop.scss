@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+    img {
+      object-fit: contain;
+    }
+  }
+  .main {
+    &__menu {
+      flex-flow: row wrap;
+      justify-content: center;
+      column-gap: 25px;
+
+      &__title {
+        width: 100%;
+      }
+    }
+    &__background {
+      height: 350px;
+    }
+    &__container {
+      width: 31%;
+    }
+  }
+}

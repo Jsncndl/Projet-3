@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+  }
+  .header img {
+    object-fit: contain;
+  }
+
+  .main__menu {
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 25px;
+  }
+  .main__menu__title {
+    width: 100%;
+  }
+  .main__background {
+    height: 350px;
+  }
+  .main__container {
+    width: 31%;
+  }
+}
+
+/*# sourceMappingURL=style_menu_desktop.css.map */

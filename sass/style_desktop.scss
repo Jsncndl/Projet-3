@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+  .header {
+      height: 60px;
+      position: fixed;
+      top: 0;
+      background-color: white;
+      z-index: 10000;
+    img {
+      object-fit: contain;
+    }
+  }
+  .intro {
+      margin-top: 60px;
+      flex-flow: row wrap;
+      
+      &__explore {
+          width: 50%;
+          background-color: unset;
+          padding: 0px 80px;
+      }
+
+      &__operation {
+          width: 320px;
+      }
+  }
+
+  .main {
+      &__container {
+          flex-flow: row wrap;
+          justify-content: space-between;
+          &__card {
+              width: 49%;
+
+              &__fig__image__img {
+                  bottom: 70px;
+              }
+          }
+      }
+  }
+}

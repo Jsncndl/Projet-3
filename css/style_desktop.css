@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+  .header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+  }
+  .header img {
+    object-fit: contain;
+  }
+
+  .intro {
+    margin-top: 60px;
+    flex-flow: row wrap;
+  }
+  .intro__explore {
+    width: 50%;
+    background-color: unset;
+    padding: 0px 80px;
+  }
+  .intro__operation {
+    width: 320px;
+  }
+
+  .main__container {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .main__container__card {
+    width: 49%;
+  }
+  .main__container__card__fig__image__img {
+    bottom: 70px;
+  }
+}
+
+/*# sourceMappingURL=style_desktop.css.map */
