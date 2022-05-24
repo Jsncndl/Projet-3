@@ -2,6 +2,9 @@
 @import "./Utils/reset";
 @import "./Utils/animations";
 
+@import "./Layout/header";
+@import "./Layout/footer";
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -10,55 +13,6 @@ body {
   box-sizing: border-box;
 }
 
-.loading-spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(#f2f2f2, 0.9);
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 10000;
-  opacity: 1;
-  animation: spinner-bg 1s both;
-  animation-delay: 1.5s;
-
-  &__item {
-    width: 35px;
-    height: 35px;
-    margin: 20px;
-    background: linear-gradient(
-      $color-primary,
-      $color-secondary,
-      $color-primary
-    );
-    border: 1px solid rgba($color-tertiary, 0.5);
-    border-radius: 100px;
-    transform: translateY(0px) rotate(0deg);
-    animation: spinner 1.3s ease-in-out;
-    &--1 {
-      animation-delay: 0.1s;
-    }
-    &--2 {
-      animation-delay: 0.2s;
-    }
-    &--3 {
-      animation-delay: 0.3s;
-    }
-  }
-}
-
-.header {
-  display: flex;
-  position: relative;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
-  box-shadow: 0px 0px 4px 3px darken($color: #f2f2f2, $amount: 20);
-  img {
-    width: 45%;
-  }
-}
 .intro {
   display: flex;
   flex-direction: column;
@@ -83,10 +37,7 @@ body {
     background-color: #f2f2f2;
     padding: 20px;
     h1 {
-      padding-top: 20px;
-      padding-left: 30px;
-      padding-right: 30px;
-      padding-bottom: 10px;
+      padding: 20px 30px 10px 30px;
       font-weight: 800;
     }
     p {
@@ -95,30 +46,27 @@ body {
     }
 
     .btn--explore {
-      margin-top: 30px;
-      margin-bottom: 25px;
-      padding: 15px;
-      padding-right: 20px;
-      padding-left: 20px;
+      margin: 30px 0px 25px 0px;
+      padding: 15px 20px;
       background-image: linear-gradient(
         -5deg,
         $color-primary,
         $color-secondary
       );
       border: 0px solid;
-      border-radius: 25px;
+      border-radius: 100px;
       font-size: 16px;
-      box-shadow: 0px 2px 3px grey;
+      box-shadow: 0px 2px 6px lighten($color: grey, $amount: 7);
       color: white;
       transition: background-image 300ms ease, box-shadow 300ms ease;
 
       &:hover {
         background-image: linear-gradient(
           -5deg,
-          lighten($color-primary, 5),
-          lighten($color-secondary, 5)
+          lighten($color-primary, 10),
+          lighten($color-secondary, 10)
         );
-        box-shadow: 0px 1px 10px grey;
+        box-shadow: 0px 1px 10px 1px grey;
       }
     }
   }
@@ -127,13 +75,13 @@ body {
     flex-direction: column;
     width: 100%;
     padding: 20px;
-    margin-top: 25px;
-    margin-bottom: 30px;
+    margin: 25px 0px 30px 0px;
     gap: 15px;
+
     &__list {
       list-style: none;
       counter-reset: tuto;
-      padding-left: 10px;
+      padding: 0 0 0 10px;
       display: flex;
       flex-direction: column;
       gap: 25px;
@@ -168,7 +116,7 @@ body {
           left: -12px;
         }
         &:last-child {
-          background-color: rgba($color-primary, 0.15);
+          background-color: rgba($color-primary, 0.13);
         }
         &__label {
           &--grey {
@@ -185,13 +133,11 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding: 45px 20px;
   background-color: #f2f2f2;
 
   &__h2 {
-    margin-bottom: 20px;
+    margin: 0px 0px 20px 0px;
   }
   &__container {
     display: flex;
@@ -204,7 +150,7 @@ body {
       border-radius: 20px;
       background-color: white;
       box-shadow: 0px 3px 6px lightgray;
-      margin-bottom: 20px;
+      margin: 0px 0px 20px 0px;
       position: relative;
 
       &__fig {
@@ -219,9 +165,7 @@ body {
             top: 15px;
             right: 15px;
             width: fit-content;
-            padding: 7px;
-            padding-left: 12px;
-            padding-right: 12px;
+            padding: 7px 12px;
             background-color: $color-tertiary;
             color: darken($color-tertiary, 40);
             font-weight: 500;
@@ -249,7 +193,7 @@ body {
 
             &__title {
               font-size: 18px;
-              margin-bottom: 2px;
+              margin: 0px 0px 2px 0px;
             }
           }
 
@@ -300,44 +244,6 @@ body {
               opacity: 0;
             }
           }
-        }
-      }
-    }
-  }
-}
-
-.footer {
-  padding: 25px;
-  color: #ffffff;
-  background-color: lighten($color: #000000, $amount: 25);
-
-  &__img {
-    filter: invert(91%) sepia(91%) saturate(28%) hue-rotate(205deg)
-      brightness(108%) contrast(100%);
-    width: 30%;
-    margin-top: 5px;
-  }
-
-  &__nav {
-    margin-bottom: 20px;
-
-    &__list {
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      row-gap: 7px;
-
-      &__link {
-        display: flex;
-
-        a {
-          text-decoration: none;
-          color: #ffffff;
-        }
-
-        &__icon {
-          width: 22px;
         }
       }
     }
