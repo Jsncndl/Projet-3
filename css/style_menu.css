@@ -338,45 +338,45 @@ h1 {
   background-color: #99e2d0;
   position: absolute;
   height: 100%;
-  width: 65px;
+  width: 60px;
   top: 0;
-  right: -65px;
+  right: -60px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #99e2d0;
-  font-size: 18px;
+  font-size: 14px;
 }
 .main__container__button__check__icon {
   background-color: #ffffff;
   border-radius: 100px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .main__container__button:hover {
-  transition: padding-right 500ms ease-in-out;
+  transition: padding-right 500ms;
   transition-delay: 40ms;
-  padding-right: 80px;
+  padding-right: 75px;
 }
 .main__container__button:hover > .main__container__button__check {
   transition: transform 500ms ease-in-out;
-  transform: translateX(-65px);
+  transform: translateX(-60px);
 }
 .main__container__button:hover .main__container__button__check__icon {
   animation: rotate 400ms 1 ease-in-out;
   animation-delay: 100ms;
 }
 .main__container__button:active {
-  transition: padding-right 500ms ease-in-out;
+  transition: padding-right 500ms;
   transition-delay: 40ms;
-  padding-right: 80px;
+  padding-right: 75px;
 }
 .main__container__button:active > .main__container__button__check {
   transition: transform 500ms ease-in-out;
-  transform: translateX(-65px);
+  transform: translateX(-60px);
 }
 .main__container__button:active .main__container__button__check__icon {
   animation: rotate 400ms 1 ease-in-out;
