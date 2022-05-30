@@ -24,6 +24,10 @@
   .main__container {
     width: 31%;
   }
+
+  .footer__img {
+    width: 180px;
+  }
 }
 
 /*# sourceMappingURL=style_menu_desktop.css.map */

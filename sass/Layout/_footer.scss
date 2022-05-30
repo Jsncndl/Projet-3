@@ -1,13 +1,12 @@
 .footer {
   padding: 25px;
   color: #ffffff;
-  background-color: lighten($color: #000000, $amount: 25);
+  background-color: lighten($color: #000000, $amount: 20);
 
   &__img {
     filter: invert(91%) sepia(91%) saturate(28%) hue-rotate(205deg)
       brightness(108%) contrast(100%);
     width: 30%;
-    margin-top: 5px;
   }
 
   &__nav {

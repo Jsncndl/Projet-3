@@ -33,6 +33,10 @@
   .main__container__card__fig__image__img {
     bottom: 70px;
   }
+
+  .footer__img {
+    width: 180px;
+  }
 }
 
 /*# sourceMappingURL=style_desktop.css.map */

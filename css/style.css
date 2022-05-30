@@ -97,8 +97,7 @@ a {
   background: linear-gradient(#9356dc, #ff79da, #9356dc);
   border: 1px solid rgba(153, 226, 208, 0.5);
   border-radius: 100px;
-  transform: translateY(0px) rotate(0deg);
-  animation: spinner 1.3s ease-in-out;
+  animation: spinner 1.3s ease-in-out forwards;
 }
 .loading-spinner__item--1 {
   animation-delay: 0.1s;
@@ -125,12 +124,11 @@ a {
 .footer {
   padding: 25px;
   color: #ffffff;
-  background-color: #404040;
+  background-color: #333333;
 }
 .footer__img {
   filter: invert(91%) sepia(91%) saturate(28%) hue-rotate(205deg) brightness(108%) contrast(100%);
   width: 30%;
-  margin-top: 5px;
 }
 .footer__nav {
   margin-bottom: 20px;
